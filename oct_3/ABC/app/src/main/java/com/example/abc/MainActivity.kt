@@ -1,21 +1,22 @@
-package com.example.myapp
+package com.example.abc
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import com.example.myapp.ui.CounterScreen
-import com.example.myapp.ui.theme.MyAppTheme
+import com.example.abc.ui.ABCScreen
+import com.example.abc.ui.theme.ABCTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            MyAppTheme {
-                CounterScreen()
+            ABCTheme {
+                ABCScreen()
             }
         }
     }
 }
-
